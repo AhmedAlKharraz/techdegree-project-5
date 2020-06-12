@@ -21,3 +21,12 @@ footer {
   font-size: 1.8em;
   color:white
 }
+
+.nav-link:active{
+  color: hotpink !important;
+}
+
+.active {
+  color: hotpink !important;
+}
+

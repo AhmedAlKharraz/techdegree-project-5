@@ -6,14 +6,14 @@
         </a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active" style="color: hotpink;">
-                    <a class="nav-link" href="/"><b>Home</b></a>
-                </li>
                 <li class="nav-item" style="color: hotpink;">
-                    <a class="nav-link" href="{{url('/cats')}}"><b>Cats</b></a>
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/"><b>Home</b></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url('/dogs')}}"><b>Dogs</b></a>
+                    <a class="nav-link {{ Request::is('cats') ? 'active' : '' }}" href="{{url('/cats')}}"><b>Cats</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('dogs') ? 'active' : '' }}" href="{{url('/dogs')}}"><b>Dogs</b></a>
                 </li>
 
             </ul>
